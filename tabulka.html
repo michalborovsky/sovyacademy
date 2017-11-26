@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Uloha 1</title>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="tabulka_script.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<center>
+		<table>
+			<tr>
+				<td>First name:</td>
+				<td><input type="text" name="fname" id="fname">
+					<div id="fnameError" class="error"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Last name:</td>
+				<td><input type="text" name="lname" id="lname">
+					<div id="lnameError" class="error"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Date of birth:</td>
+				<td><input type="date" name="dob" id="dob">
+					<div id="dobError" class="error"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td><input type="radio" name="gender" value="man" id="man" checked><label for="man"> Man</label><br>
+					<input type="radio" name="gender" value="woman" id="woman"><label for="woman"> Woman</label></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button id="add" onclick="validation()">ADD</button></td>
+			</tr>
+		</table>
+		<p id="error"></p>
+		<div class="menu">Filter by gender:
+			  <select id="genders" onchange="setFilter()">
+					<option value="all" selected>All</option>
+					<option value="man">Man</option>
+					<option value="woman">Woman</option>
+			  </select>
+			  <input type="checkbox" id="showAge" onchange="showAge(this)">Show age
+		</div>
+		<table id="output">
+			<thead>
+				<tr>
+					<th>First name</th>
+					<th>Last name</th>
+					<th>Date of birth/Age</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<div id="storage">
+			<button id="save" onclick="saveStorage()">SAVE</button>
+			<button id="load" onclick="loadStorage()">LOAD</button>
+		</div>
+	</center>
+</html>

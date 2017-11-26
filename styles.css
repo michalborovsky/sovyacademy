@@ -1,0 +1,44 @@
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+#output {
+    display: none;
+    width: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+table#output th, table#output td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#output tr:nth-child(even) {
+    background-color: #c1c1c1;
+}
+table#output th {
+    background-color: #cc0000;
+    color: white;
+}
+
+input[type="text"] {
+    text-transform: capitalize;
+}
+
+div {
+    padding-top: 5px;
+}
+
+#storage {
+    margin-top: 10px;
+}
